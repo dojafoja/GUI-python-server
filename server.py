@@ -2,7 +2,7 @@
 import os
 import socket
 import threading
-import Queue
+
 
 #Python 2.7 imports
 try:
@@ -13,7 +13,7 @@ try:
     import tkFileDialog as filedialog
     from SimpleHTTPServer import SimpleHTTPRequestHandler
     from BaseHTTPServer import HTTPServer
-    
+    import Queue
 #Python 3.x imports
 except ImportError:
     import tkinter as tk
@@ -22,6 +22,7 @@ except ImportError:
     from tkinter import filedialog
     from http.server import SimpleHTTPRequestHandler
     from http.server import HTTPServer
+    import queue as Queue
 
 
 
@@ -169,7 +170,6 @@ def switch_dir(path):
 def check_port(port):
     try:
         p = int(port)
-        print(p)
         if p > 65535:
             return
         else:
