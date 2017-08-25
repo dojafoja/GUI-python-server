@@ -14,6 +14,7 @@ try:
     from SimpleHTTPServer import SimpleHTTPRequestHandler
     from BaseHTTPServer import HTTPServer
     import Queue
+    import commands
 #Python 3.x imports
 except ImportError:
     import tkinter as tk
@@ -23,6 +24,7 @@ except ImportError:
     from http.server import SimpleHTTPRequestHandler
     from http.server import HTTPServer
     import queue as Queue
+    import subprocess as commands
 
 
 
